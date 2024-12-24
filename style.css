@@ -1,0 +1,25 @@
+#hero_arrow{
+    animation: shake-vertical 2s linear 0s infinite;
+}
+
+.small-shake{
+    animation: shake-vertical 8s ease-out 0s infinite;
+}
+@keyframes shake-vertical {
+			
+    0% {
+        transform:translateY(0);
+    }
+    25% {
+        transform:translateY(-10px);
+    }
+    50% {
+        transform:translateY(0);
+    }
+    75% {
+        transform:translateY(10px);
+    }
+    100% {
+        transform:translateY(0);
+    }
+}
