@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const card_height = document.getElementById("main_id").clientHeight
 
     gsap.to(pointer, {
-        y: () => (main.offsetHeight - card_height*0.065 - pointer.offsetHeight),
+        y: () => (main.offsetHeight - card_height*0.06 - pointer.offsetHeight),
         ease: "none",
         scrollTrigger: {
             trigger: main,
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     gsap.to("#line", {
-        height: () => (main.offsetHeight - card_height*0.065 - pointer.offsetHeight),
+        height: () => (main.offsetHeight - card_height*0.06 - pointer.offsetHeight),
         ease: "none",
         scrollTrigger: {
             trigger: main,
