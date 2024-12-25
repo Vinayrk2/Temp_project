@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 gsap.utils.toArray(".l-pointer").forEach((pointer)=>{
     gsap.to(pointer,{
-        border: "10px solid green",
+        border: "10px solid black",
         x: -5.5,
         y:-20,
         ease: "linear",

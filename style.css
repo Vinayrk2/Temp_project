@@ -27,7 +27,7 @@
 #line{
     background-color: rgb(0, 0, 0);
     width: 3px;
-    z-index: -2;
+    z-index: 2;
 }
 
 .l-pointer{
@@ -44,5 +44,4 @@
     position:absolute;
     left:-0.85vw;
     top: -3px;
-    z-index: 4;
 }
