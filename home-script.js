@@ -142,26 +142,28 @@ gsap.utils.toArray(".l-pointer").forEach((pointer)=>{
 
 
 gsap.utils.toArray(".step_bstep_cards").forEach((section, index) => {
+    const isMobile = window.innerWidth <= 380;
+  
     gsap.fromTo(
       section,
       {
-        y: 100,      
-        opacity: 0,  
+        y: 100,
+        opacity: 0,
       },
       {
-        y: 0,       
-        opacity: 1,  
+        y: 0,
+        opacity: 1,
         scrollTrigger: {
           trigger: section,
           start: "top 38%",
           end: "bottom 65%",
-        //   markers: true
-          scrub: ()=> window.innerWidth > 380 ? true : false,
-          pin: ()=> window.innerWidth > 380 ? true : false,
-          pinSpacing: true,
+          scrub: !isMobile, // Disable scrub on mobile
+          pin: !isMobile,   // Disable pinning on mobile
+          pinSpacing: !isMobile, // Disable pin spacing on mobile
         },
       }
     );
+
     gsap.fromTo(
       ".hr_marker",
       {
