@@ -37,7 +37,7 @@
 }
 
 #pointer{
-    background-image: url('./mouse3.webp');
+    background-image: url('./images/mouse3.webp');
     background-size: 100% 100%;
     height:80px; width:50px;
     position:absolute;
