@@ -48,5 +48,6 @@
 
 .hr_marker{
     position: absolute;
-    height:4px; 
+    height:4px;
+    margin-top: -1px;
 }
