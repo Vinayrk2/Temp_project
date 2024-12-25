@@ -2,737 +2,774 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GiaPos - Business Solution</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/ae627849f8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/ae627849f8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
 
-    <style>
-        @media(max-width: 767px) {
-            #menu {
-                top: 65px;
-                background-color: rgb(247, 247, 247);
-                right: 10px;
-                padding: 5px 20px;
-                width: 100%;
-            }
+  <style>
+    @media(max-width: 767px) {
+      #menu {
+        top: 65px;
+        background-color: rgb(247, 247, 247);
+        right: 10px;
+        padding: 5px 20px;
+        width: 100%;
+      }
 
-            #menu a {
-                padding: 5px;
-            }
+      #menu a {
+        padding: 5px;
+      }
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4338ca',
+            secondary: '#fbbf24'
+          }
         }
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#4338ca',
-                        secondary: '#fbbf24'
-                    }
-                }
-            }
-        }
-    </script>
+      }
+    }
+
+       
+
+  </script>
 </head>
 
 <body class="bg-white">
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50 border-b">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="#" class="flex items-center space-x-2">
-                        <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                        <span class="text-xl font-semibold">Dream.com</span>
-                    </a>
-                </div>
-
-                <!-- Hamburger Menu -->
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="text-gray-600 focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Navigation Links -->
-                <div id="menu" class="hidden md:block flex flex-col md:items-center md:space-x-8 absolute md:relative">
-                    <a href="#" class="text-green-600 font-medium header-links border-b border-green-500 pb-5">Home</a>
-                    <a href="#" id="online_training" class="text-gray-600 hover:text-gray-900 header-links">Online Training <i class="fa-solid fa-chevron-down"></i></a>
-                    <div id="online_training_container" class="absolute mt-20 sm:mt-20 md:mt-5" style="display: none;">
-                    <div class="bg-gray-100 p-7 flex gap-10">
-                        <div class="flex flex-col gap-2">
-                            <p class="border-b border-green-700 font-semibold">Cources</p>
-                        <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Web Development</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900 header-links">App Development</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900 header-links">AI & ML</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Data Science</a>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <p class="border-b border-green-700 font-semibold">Resources</p>
-                            <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Resume Templates</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Notes</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Issue Solve</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900 header-links">More Options</a>
-                        </div>
-                        </div>
-                    </div>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Service</a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Insights</a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 header-links">About Us</a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Contact Us</a>
-                </div>
-            </div>
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50 border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="#" class="flex items-center space-x-2">
+            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <span class="text-xl font-semibold">Dream</span>
+          </a>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <main class="pt-32 pb-16 px-4 sm:px-6 lg:px-8"
-        style=" background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.144)), url('rign\ back.png'); background-size: cover;">
-        <img class="absolute hero_imgs small-shake" style="top: 52%; left: 8%; width: 18%;" src="laptop 2.png">
-        <img class="absolute hero_imgs small-shake" style="top: 16%; right: 5%; width: 30%;" src="pen img.png">
-        <div class="max-w-4xl mx-auto text-center">
-            <!-- New Tag -->
-            <div class="inline-flex items-center space-x-2 mb-6">
-                <span class="px-2.5 py-0.5 text-sm bg-green-100 text-green-600 rounded-full hero_other">
-                    New
-                </span>
-                <span class="text-gray-600 hero_other">
-                    Effortless transaction for your business
-                </span>
-            </div>
-
-            <!-- Heading -->
-            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-bold tracking-tight mb-8 hero_title">
-                Your <span class="text-green-500 text-5xl md:text-8xl lg:text-9xl">All-In-One</span><br
-                    class="hidden sm:block" />
-                <p class="lg:text-8xl">Career Solution</p>
-            </h1>
-
-            <!-- Description -->
-            <p class="text-gray-600 text-lg mb-12 max-w-2xl mx-auto hero_other">
-                Our solution offers a comprehensive suite of features to help you manage your inventory,
-                track sales, and enhance customer experience.
-            </p>
+        <!-- Hamburger Menu -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
-        <img src="./down-arrow-svg.svg" class="p-2 rounded-full text-center hero_other" id="hero_arrow"
-            style="transform: rotate(90deg); width: 70px; display: block; margin: auto;">
-    </main>
 
-    <!-- second part of design -->
-    <main class="container-fluid px-4 py-12 bg-gray-100">
-        <!-- Header Section -->
-        <header class="text-center mb-16">
-            <p class="text-green-800 uppercase tracking-wider mb-4 service_title">CLAPOS FEATURES</p>
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 service_title">
-                Revolutionize Your<br class="hidden sm:block" />
-                Career Operations
-            </h1>
-            <p class="text-gray-600 max-w-2xl mx-auto service_description">
-                Explore cutting-edge features tailored to enhance your POS experience and boost your business
-                performance
-            </p>
-        </header>
-
-        <!-- Features Grid -->
-        <div class="md:w-10/12 sm:w-screen block m-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                <!-- Feature 1 -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow service_card">
-                    <div class="aspect-video bg-gray-100 rounded-lg mb-6">
-                        <img src="ai.png" alt="Order Management Interface"
-                            class="w-full h-full object-cover rounded-lg" />
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Artificial Intelligence</h3>
-                    <p class="text-gray-600">
-                        Efficient order processing for faster service from order entry to kitchen delivery
-                    </p>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow service_card">
-                    <div class="aspect-video bg-gray-100 rounded-lg mb-6">
-                        <img src="app dev.png" alt="Inventory Management Interface"
-                            class="w-full h-full object-cover rounded-lg" />
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">App Development</h3>
-                    <p class="text-gray-600">
-                        Precise inventory control for optimal stock levels and maximizing profits
-                    </p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow service_card">
-                    <div class="aspect-video bg-gray-100 rounded-lg mb-6">
-                        <img src="web dev.png" alt="Product Variant Interface"
-                            class="w-full h-full object-cover rounded-lg" />
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
-                    <p class="text-gray-600">
-                        Flexible product customization for your customers' unique preferences
-                    </p>
-                </div>
-                <!-- Feature 4 -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow service_card">
-                    <div class="aspect-video bg-gray-100 rounded-lg mb-6">
-                        <img src="data sci1.png" alt="Product Variant Interface"
-                            class="w-full h-full object-cover rounded-lg" />
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Data Science</h3>
-                    <p class="text-gray-600">
-                        Flexible product customization for your customers' unique preferences
-                    </p>
-                </div>
+        <!-- Navigation Links -->
+        <div id="menu" class="hidden md:block flex flex-col md:items-center md:space-x-8 absolute md:relative">
+          <a href="#" class="text-green-600 font-medium header-links border-b border-green-500 pb-5">Home</a>
+          <a href="#" id="online_training" class="text-gray-600 hover:text-gray-900 header-links">Online Training <i
+              class="fa-solid fa-chevron-down"></i></a>
+          <div id="online_training_container" class="absolute mt-20 sm:mt-20 md:mt-5" style="display: none;">
+            <div class="bg-gray-100 p-7 flex gap-10">
+              <div class="flex flex-col gap-2">
+                <p class="border-b border-green-700 font-semibold">Courses</p>
+                <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Web Development</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 header-links">App Development</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 header-links">AI & ML</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Data Science</a>
+              </div>
+              <div class="flex flex-col gap-2">
+                <p class="border-b border-green-700 font-semibold">Resources</p>
+                <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Resume Templates</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Notes</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Issue Solve</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 header-links">More Options</a>
+              </div>
             </div>
+          </div>
+          <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Service</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Insights</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 header-links">About Us</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Contact Us</a>
         </div>
-    </main>
+      </div>
+    </div>
+  </nav>
 
-    <!-- testimonial box -->
-    <main class="container mx-auto px-4 py-16 max-w-6xl">
-        <!-- Header Section -->
-        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-16">
-            Transforming Workflows:
-            <span class="block text-green-400 text-3xl md:text-6xl testimonial_text">Those Who've Made the Switch</span>
+  <!-- Hero Section -->
+  <main class="pt-32 pb-16 px-4 sm:px-6 lg:px-8"
+    style=" background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.144)), url('rign\ back.png'); background-size: cover;">
+    <img class="absolute hero_imgs small-shake" style="top: 52%; left: 8%; width: 18%;" src="laptop 2.png">
+    <img class="absolute hero_imgs small-shake" style="top: 16%; right: 5%; width: 30%;" src="pen img.png">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- New Tag -->
+      <div class="inline-flex items-center space-x-2 mb-6">
+        <span class="px-2.5 py-0.5 text-sm bg-green-100 text-green-600 rounded-full hero_other">
+            New
+        </span>
+        <span class="text-gray-600 hero_other">
+          Turning US Talent Dreams into Reality
+        </span>
+    </div>
+      <!-- Heading -->
+      <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-bold tracking-tight mb-8 hero_title">
+        Your <span class="text-green-500 text-5xl md:text-8xl lg:text-9xl">All-In-One</span><br
+          class="hidden sm:block" />
+        <p class="lg:text-8xl">Career Solution</p>
+      </h1>
+
+      <!-- Description -->
+      <p class="text-gray-600 text-lg mb-12 max-w-3xl mx-auto hero_other">
+        Offering comprehensive online training of in-demand skills. we also provides job placement assistance, ensuring career success through personalized guidance and resources.
+      </p>
+    </div>
+    <img src="./down-arrow-svg.svg" class="p-2 rounded-full text-center hero_other" id="hero_arrow"
+      style="transform: rotate(90deg); width: 70px; display: block; margin: auto;">
+  </main>
+
+  <!-- second part of design -->
+  <main class="container-fluid px-4 py-12 bg-gray-100">
+    <!-- Header Section -->
+    <header class="text-center mb-16">
+      <p class="text-green-800 uppercase tracking-wider mb-4 service_title"></p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 service_title">
+        <span>Revolutionize Your Career With Us</h1>
+      <p class="text-gray-600 max-w-2xl mx-auto service_description">
+        To make your business versatile our software development services can provide your business with cutting edge
+        technologies and open you up to get high end opportunities.
+      </p>
+    </header>
+
+    <!-- Features Grid -->
+    <div class="md:w-10/12 sm:w-screen block m-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <!-- Feature 1 -->
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow service_card">
+          <div class="aspect-video bg-gray-100 rounded-lg mb-6">
+            <img src="ai.png" alt="Order Management Interface" class="w-full h-full object-cover rounded-lg" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Software development</h3>
+          <p class="text-gray-600">
+            To make your business versatile our software development services can provide your business with cutting
+            edge technologies and open you up to get high end opportunities.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow service_card">
+          <div class="aspect-video bg-gray-100 rounded-lg mb-6">
+            <img src="app dev.png" alt="Inventory Management Interface" class="w-full h-full object-cover rounded-lg" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Staffing solution</h3>
+          <p class="text-gray-600">
+            Our comprehensive staffing solutions can provide you with an in-depth study of your profile from our experts
+            and help you get the ideal fit for your job-hunting needs.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow service_card">
+          <div class="aspect-video bg-gray-100 rounded-lg mb-6">
+            <img src="web dev.png" alt="Product Variant Interface" class="w-full h-full object-cover rounded-lg" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">IT Training</h3>
+          <p class="text-gray-600">
+            Our advanced IT training courses will help you stay ahead of your competitor candidates because we will
+            provide in-depth knowledge of every technology and its prospects you might need.
+          </p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow service_card">
+          <div class="aspect-video bg-gray-100 rounded-lg mb-6">
+            <img src="data sci1.png" alt="Product Variant Interface" class="w-full h-full object-cover rounded-lg" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Quality Assurance</h3>
+          <p class="text-gray-600">
+            Get your most elevated quality product from our quality assurance services, in which your product will
+            undergo different in detail tests to provide you with more assured services.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow service_card">
+          <div class="aspect-video rounded-lg mb-6">
+            <img src="card img 5.png" alt="Product Variant Interface" class="w-full h-full object-cover rounded-lg" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Customized Talent Solutions</h3>
+          <p class="text-gray-600">
+            Showcase your ability to provide tailored staffing solutions that meet the specific needs of clients. This includes full-time, contract, and remote IT professionals and business goals.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow service_card">
+          <div class="aspect-video rounded-lg mb-6">
+            <img src="card img 6.png" alt="Product Variant Interface" class="w-full h-full object-cover rounded-lg" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Rapid Deployment of Skilled Professionals</h3>
+          <p class="text-gray-600">
+            Highlight your ability to quickly match skilled IT professionals with client needs, reducing downtime and accelerating project delivery.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Animation things -->
+  <h1 class="text-4xl md:text-5xl font-bold mt-10 text-center service_title">
+    <span class="bg-green-300 text-white">Step by S</span>tep Guide to <span class="bg-green-400 text-white">Achieving You</span>r Goals
+  </h1>
+  <main class="container mx-auto px-4 py-8 md:pb-16">
+    <!-- card 1 -->
+    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 rounded-t-lg shadow-lg md:h-[500px]">
+      <!-- Left side with car image -->
+      <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
+        <img src="service card (5).png" alt="Electric Car" class="max-w-full max-h-full object-contain" />
+      </div>
+      <!-- Right side with content -->
+      <div class="w-full md:w-1/2 space-y-6">
+        <h1 class="text-4xl font-bold text-gray-800">
+          ELECTRIC CARS
         </h1>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          They're fast, fun, quiet, and efficient. So what's next? Four things, actually: style, range, resale value,
+          and ownership costs. Our engineers took on these route values. So, armed with clever ideas and modern
+          technology, we set out to change all that. Introducing the switchable-battery Renault Fluence Z.E.
+        </p>
+        <button class="bg-green-800 text-white px-8 py-3 rounded-md hover:bg-green-900 transition-colors">
+          LEARN MORE
+        </button>
+      </div>
+    </div>
 
-        <!-- Stats Grid -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <!-- Companies -->
-            <div class="text-center">
-                <p class="text-blue-600 mb-1 text-md">Users</p>
-                <h2 class="text-3xl md:text-5xl font-bold mb-1 ">246+</h2>
-                <p class="text-gray-500 text-sm">Daily Active</p>
-            </div>
+    <!-- card 2 -->
+    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px]">
+      <!-- Right side with content -->
+      <div class="w-full md:w-1/2 space-y-6">
+        <h1 class="text-4xl font-bold text-gray-800">
+          ELECTRIC CARS
+        </h1>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          They're fast, fun, quiet, and efficient. So what's next? Four things, actually: style, range, resale value,
+          and ownership costs. Our engineers took on these route values. So, armed with clever ideas and modern
+          technology, we set out to change all that. Introducing the switchable-battery Renault Fluence Z.E.
+        </p>
+        <button class="bg-green-800 text-white px-8 py-3 rounded-md hover:bg-green-900 transition-colors">
+          LEARN MORE
+        </button>
+      </div>
+      <!-- Left side with car image -->
+      <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
+        <img src="service card (1).png" alt="Electric Car" class="max-w-full max-h-full object-contain" />
+      </div>
+    </div>
 
-            <!-- Unicorns -->
-            <div class="text-center">
-                <p class="text-blue-600 mb-1 text-md">Cources</p>
-                <h2 class="text-3xl md:text-5xl font-bold mb-1">10+</h2>
-                <p class="text-gray-500 text-sm">Available Training</p>
-            </div>
+    <!-- card 3 -->
+    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px]">
+      <!-- Left side with car image -->
+      <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
+        <img src="service card (3).png" alt="Electric Car" class="max-w-full max-h-full object-contain" />
+      </div>
+      <!-- Right side with content -->
+      <div class="w-full md:w-1/2 space-y-6">
+        <h1 class="text-4xl font-bold text-gray-800">
+          ELECTRIC CARS
+        </h1>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          They're fast, fun, quiet, and efficient. So what's next? Four things, actually: style, range, resale value,
+          and ownership costs. Our engineers took on these route values. So, armed with clever ideas and modern
+          technology, we set out to change all that. Introducing the switchable-battery Renault Fluence Z.E.
+        </p>
+        <button class="bg-green-800 text-white px-8 py-3 rounded-md hover:bg-green-900 transition-colors">
+          LEARN MORE
+        </button>
+      </div>
+    </div>
 
-            <!-- Templates -->
-            <div class="text-center">
-                <p class="text-blue-600 mb-1 text-md">Templates</p>
-                <h2 class="text-3xl md:text-5xl font-bold mb-1">600+</h2>
-                <p class="text-gray-500 text-sm">Use for commercials</p>
-            </div>
+    <!-- card 4 -->
+    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px]">
+      <!-- Right side with content -->
+      <div class="w-full md:w-1/2 space-y-6">
+        <h1 class="text-4xl font-bold text-gray-800">
+          ELECTRIC CARS
+        </h1>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          They're fast, fun, quiet, and efficient. So what's next? Four things, actually: style, range, resale value,
+          and ownership costs. Our engineers took on these route values. So, armed with clever ideas and modern
+          technology, we set out to change all that. Introducing the switchable-battery Renault Fluence Z.E.
+        </p>
+        <button class="bg-green-800 text-white px-8 py-3 rounded-md hover:bg-green-900 transition-colors">
+          LEARN MORE
+        </button>
+      </div>
+      <!-- Left side with car image -->
+      <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
+        <img src="service card (2).png" alt="Electric Car" class="max-w-full max-h-full object-contain" />
+      </div>
+    </div>
 
-            <!-- Ratings -->
-            <div class="text-center">
-                <p class="text-blue-600 mb-1 text-md">Ratings</p>
-                <h2 class="text-3xl md:text-5xl font-bold mb-1">4.5/5</h2>
-                <p class="text-gray-500 text-sm">Satisfactions</p>
-            </div>
-        </div>
+    <!-- card 5 -->
+    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px]">
+      <!-- Left side with car image -->
+      <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
+        <img src="service card (4).png" alt="Electric Car" class="max-w-full max-h-full object-contain" />
+      </div>
+      <!-- Right side with content -->
+      <div class="w-full md:w-1/2 space-y-6">
+        <h1 class="text-4xl font-bold text-gray-800">
+          ELECTRIC CARS
+        </h1>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          They're fast, fun, quiet, and efficient. So what's next? Four things, actually: style, range, resale value,
+          and ownership costs. Our engineers took on these route values. So, armed with clever ideas and modern
+          technology, we set out to change all that. Introducing the switchable-battery Renault Fluence Z.E.
+        </p>
+        <button class="bg-green-800 text-white px-8 py-3 rounded-md hover:bg-green-900 transition-colors">
+          LEARN MORE
+        </button>
+      </div>
+    </div>
 
-        <!-- Testimonials -->
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- Testimonial 1 -->
-            <div class="bg-gray-50 rounded-xl p-8">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="font-semibold text-xl">Simplified Workflow</h3>
-                    <div class="flex items-center">
-                        <span class="mr-1">5/5</span>
-                        <span class="text-yellow-400">⭐</span>
-                    </div>
-                </div>
-                <p class="text-gray-600 mb-4">
-                    Since adopting Founding.co to project completion times, it's like having an extra set of hands!
-                </p>
-                <div class="flex items-center">
-                    <div>
-                        <p class="font-medium">Jessica R.</p>
-                        <p class="text-gray-500 text-sm">Operations Manager at a Marketing Firm</p>
-                    </div>
-                </div>
-            </div>
+    <!-- card 6 -->
+    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 rounded-b-lg shadow-lg md:h-[500px]">
+      <!-- Right side with content -->
+      <div class="w-full md:w-1/2 space-y-6">
+        <h1 class="text-4xl font-bold text-gray-800">
+          ELECTRIC CARS
+        </h1>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          They're fast, fun, quiet, and efficient. So what's next? Four things, actually: style, range, resale value,
+          and ownership costs. Our engineers took on these route values. So, armed with clever ideas and modern
+          technology, we set out to change all that. Introducing the switchable-battery Renault Fluence Z.E.
+        </p>
+        <button class="bg-green-800 text-white px-8 py-3 rounded-md hover:bg-green-900 transition-colors">
+          LEARN MORE
+        </button>
+      </div>
+      <!-- Left side with car image -->
+      <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
+        <img src="service card (6).png" alt="Electric Car" class="max-w-full max-h-full object-contain" />
+      </div>
+    </div>
+  </main>
 
-            <!-- Testimonial 2 -->
-            <div class="bg-gray-50 rounded-xl p-8">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="font-semibold text-xl">Scalable for Growing Teams</h3>
-                    <div class="flex items-center">
-                        <span class="mr-1">5/5</span>
-                        <span class="text-yellow-400">⭐</span>
-                    </div>
-                </div>
-                <p class="text-gray-600 mb-4">
-                    The transition has been seamless, and the software scales effortlessly as we grow.
-                </p>
-                <div class="flex items-center">
-                    <div>
-                        <p class="font-medium">Michael T.</p>
-                        <p class="text-gray-500 text-sm">CTO of a Fintech Company</p>
-                    </div>
-                </div>
-            </div>
+  <!-- testimonial box -->
+  <main class="container mx-auto px-4 py-16 max-w-6xl">
+    <!-- Header Section -->
+    <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-16">
+      Transforming Careers
+      <span class="block text-green-400 text-3xl md:text-6xl testimonial_text">Those Who've Made the Choice</span>
+    </h1>
 
-            <!-- Testimonial 3 -->
-            <div class="bg-gray-50 rounded-xl p-8">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="font-semibold text-xl">Scalable for Growing Teams</h3>
-                    <div class="flex items-center">
-                        <span class="mr-1">5/5</span>
-                        <span class="text-yellow-400">⭐</span>
-                    </div>
-                </div>
-                <p class="text-gray-600 mb-4">
-                    The transition has been seamless, and the software scales effortlessly as we grow.
-                </p>
-                <div class="flex items-center">
-                    <div>
-                        <p class="font-medium">Michael T.</p>
-                        <p class="text-gray-500 text-sm">CTO of a Fintech Company</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      <!-- Companies -->
+      <div class="text-center">
+        <p class="text-blue-600 mb-1 text-md">Trained Students</p>
+        <h2 class="text-3xl md:text-5xl font-bold mb-1 ">600+</h2>
+        <p class="text-gray-500 text-sm">Online Training</p>
+      </div>
+
+      <div class="text-center">
+        <p class="text-blue-600 mb-1 text-md">Cources</p>
+        <h2 class="text-3xl md:text-5xl font-bold mb-1">25+</h2>
+        <p class="text-gray-500 text-sm">Available now</p>
+      </div>
+
+      <!-- Templates -->
+      <div class="text-center">
+        <p class="text-blue-600 mb-1 text-md">Successful Placements</p>
+        <h2 class="text-3xl md:text-5xl font-bold mb-1">500+</h2>
+        <p class="text-gray-500 text-sm">From DreamIT Solutions</p>
+      </div>
+
+      <!-- Ratings -->
+      <div class="text-center">
+        <p class="text-blue-600 mb-1 text-md">Ratings</p>
+        <h2 class="text-3xl md:text-5xl font-bold mb-1">4.5/5</h2>
+        <p class="text-gray-500 text-sm">In Industry</p>
+      </div>
+    </div>
+
+    <h1 class="text-2xl md:text-4xl lg:text-3xl font-bold text-center mb-5">Testimonials</h1>
+
+    <div id="testimonial-carousel" class="relative w-full max-w-4xl mx-auto overflow-hidden">
+      <div id="carousel-inner" class="flex transition-transform duration-500 ease-in-out">
+          <!-- Testimonials will be dynamically inserted here -->
+      </div>
+      <div class="absolute bottom-4 left-0 right-0">
+          <div id="carousel-dots" class="flex justify-center space-x-2">
+              <!-- Navigation dots will be dynamically inserted here -->
+          </div>
+      </div>
+  </div>
+    
+  </main>
 
 
-    <!-- Animation things -->
-    <main class="container mx-auto px-4 py-8 md:pb-16">
-        <!-- card 1 -->
-        <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 rounded-lg shadow-lg md:h-[500px]">
-            <!-- Left side with car image -->
-            <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
-              <img 
-                src="service card (5).png" 
-                alt="Electric Car" 
-                class="max-w-full max-h-full object-contain"
-              />
-            </div>
-            <!-- Right side with content -->
-            <div class="w-full md:w-1/2 space-y-6">
-              <h1 class="text-4xl md:text-5xl font-bold text-gray-800">
-                ELECTRIC CARS
-              </h1>
-              <p class="text-gray-600 text-lg leading-relaxed">
-                They're fast, fun, quiet, and efficient. So what's next? Four things, actually: style, range, resale value, and ownership costs. Our engineers took on these route values. So, armed with clever ideas and modern technology, we set out to change all that. Introducing the switchable-battery Renault Fluence Z.E.
-              </p>
-              <button class="bg-green-800 text-white px-8 py-3 rounded-md hover:bg-green-900 transition-colors">
-                LEARN MORE
-              </button>
+  <!-- schedule box -->
+  <main class="bg-gray-100 p-10">
+    <h1
+      class="text-5xl font-bold mb-2 text-center mb-5 bg-gradient-to-r from-blue-100 via-green-500 to-green-900 text-transparent bg-clip-text">
+      <span class="bg-green-300 text-white">&nbsp;Your</span> Time, <span class="bg-green-400 text-white">Your
+      </span>Choice
+    </h1>
+    <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-md p-10 overflow-hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Calendar Section -->
+        <div class="calendar-section">
+          <h1 class="text-2xl font-bold mb-2 text-green-600">Book Now</h1>
+          <!-- <p class="text-gray-500 mb-6">Chemistry - Reactions and Rates</p> -->
+
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-lg font-semibold">January 2025</h2>
+            <div class="flex gap-2">
+              <button class="p-2 rounded hover:bg-gray-100">&larr;</button>
+              <button class="p-2 rounded hover:bg-gray-100">&rarr;</button>
             </div>
           </div>
 
-          <!-- card 2 -->
-          <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 rounded-lg shadow-lg md:h-[500px]">
-            <!-- Right side with content -->
-            <div class="w-full md:w-1/2 space-y-6">
-              <h1 class="text-4xl md:text-5xl font-bold text-gray-800">
-                ELECTRIC CARS
-              </h1>
-              <p class="text-gray-600 text-lg leading-relaxed">
-                They're fast, fun, quiet, and efficient. So what's next? Four things, actually: style, range, resale value, and ownership costs. Our engineers took on these route values. So, armed with clever ideas and modern technology, we set out to change all that. Introducing the switchable-battery Renault Fluence Z.E.
-              </p>
-              <button class="bg-green-800 text-white px-8 py-3 rounded-md hover:bg-green-900 transition-colors">
-                LEARN MORE
-              </button>
-            </div>
-            <!-- Left side with car image -->
-            <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
-                <img 
-                  src="service card (1).png" 
-                  alt="Electric Car" 
-                  class="max-w-full max-h-full object-contain"
-                />
-              </div>
+          <div class="grid grid-cols-7 gap-2">
+            <div class="text-center text-sm text-gray-500">Sun</div>
+            <div class="text-center text-sm text-gray-500">Mon</div>
+            <div class="text-center text-sm text-gray-500">Tue</div>
+            <div class="text-center text-sm text-gray-500">Wed</div>
+            <div class="text-center text-sm text-gray-500">Thu</div>
+            <div class="text-center text-sm text-gray-500">Fri</div>
+            <div class="text-center text-sm text-gray-500">Sat</div>
           </div>
-
-          <!-- card 3 -->
-          <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 rounded-lg shadow-lg md:h-[500px]">
-            <!-- Left side with car image -->
-            <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
-              <img 
-                src="service card (3).png" 
-                alt="Electric Car" 
-                class="max-w-full max-h-full object-contain"
-              />
-            </div>
-            <!-- Right side with content -->
-            <div class="w-full md:w-1/2 space-y-6">
-              <h1 class="text-4xl md:text-5xl font-bold text-gray-800">
-                ELECTRIC CARS
-              </h1>
-              <p class="text-gray-600 text-lg leading-relaxed">
-                They're fast, fun, quiet, and efficient. So what's next? Four things, actually: style, range, resale value, and ownership costs. Our engineers took on these route values. So, armed with clever ideas and modern technology, we set out to change all that. Introducing the switchable-battery Renault Fluence Z.E.
-              </p>
-              <button class="bg-green-800 text-white px-8 py-3 rounded-md hover:bg-green-900 transition-colors">
-                LEARN MORE
-              </button>
-            </div>
-          </div>
-
-          <!-- card 4 -->
-          <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 rounded-lg shadow-lg md:h-[500px]">
-            <!-- Right side with content -->
-            <div class="w-full md:w-1/2 space-y-6">
-              <h1 class="text-4xl md:text-5xl font-bold text-gray-800">
-                ELECTRIC CARS
-              </h1>
-              <p class="text-gray-600 text-lg leading-relaxed">
-                They're fast, fun, quiet, and efficient. So what's next? Four things, actually: style, range, resale value, and ownership costs. Our engineers took on these route values. So, armed with clever ideas and modern technology, we set out to change all that. Introducing the switchable-battery Renault Fluence Z.E.
-              </p>
-              <button class="bg-green-800 text-white px-8 py-3 rounded-md hover:bg-green-900 transition-colors">
-                LEARN MORE
-              </button>
-            </div>
-            <!-- Left side with car image -->
-            <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
-                <img 
-                  src="service card (2).png" 
-                  alt="Electric Car" 
-                  class="max-w-full max-h-full object-contain"
-                />
-              </div>
-          </div>
-
-          <!-- card 5 -->
-          <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 rounded-lg shadow-lg md:h-[500px]">
-            <!-- Left side with car image -->
-            <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
-              <img 
-                src="service card (4).png" 
-                alt="Electric Car" 
-                class="max-w-full max-h-full object-contain"
-              />
-            </div>
-            <!-- Right side with content -->
-            <div class="w-full md:w-1/2 space-y-6">
-              <h1 class="text-4xl md:text-5xl font-bold text-gray-800">
-                ELECTRIC CARS
-              </h1>
-              <p class="text-gray-600 text-lg leading-relaxed">
-                They're fast, fun, quiet, and efficient. So what's next? Four things, actually: style, range, resale value, and ownership costs. Our engineers took on these route values. So, armed with clever ideas and modern technology, we set out to change all that. Introducing the switchable-battery Renault Fluence Z.E.
-              </p>
-              <button class="bg-green-800 text-white px-8 py-3 rounded-md hover:bg-green-900 transition-colors">
-                LEARN MORE
-              </button>
-            </div>
-          </div>
-
-          <!-- card 6 -->
-          <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 rounded-lg shadow-lg md:h-[500px]">
-            <!-- Right side with content -->
-            <div class="w-full md:w-1/2 space-y-6">
-              <h1 class="text-4xl md:text-5xl font-bold text-gray-800">
-                ELECTRIC CARS
-              </h1>
-              <p class="text-gray-600 text-lg leading-relaxed">
-                They're fast, fun, quiet, and efficient. So what's next? Four things, actually: style, range, resale value, and ownership costs. Our engineers took on these route values. So, armed with clever ideas and modern technology, we set out to change all that. Introducing the switchable-battery Renault Fluence Z.E.
-              </p>
-              <button class="bg-green-800 text-white px-8 py-3 rounded-md hover:bg-green-900 transition-colors">
-                LEARN MORE
-              </button>
-            </div>
-            <!-- Left side with car image -->
-            <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
-                <img 
-                  src="service card (6).png" 
-                  alt="Electric Car" 
-                  class="max-w-full max-h-full object-contain"
-                />
-              </div>
-          </div>
-    </main>
-
-    <!-- schedule box -->
-    <main class="bg-gray-100 p-10">
-        <h1
-            class="text-5xl font-bold mb-2 text-center mb-5 bg-gradient-to-r from-blue-100 via-green-500 to-green-900 text-transparent bg-clip-text">
-            <span class="bg-green-300 text-white">&nbsp;Your</span> Time, <span class="bg-green-400 text-white">Your </span>Choice</h1>
-        <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-md p-10 overflow-hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Calendar Section -->
-                <div class="calendar-section">
-                    <h1 class="text-2xl font-bold mb-2 text-green-600">Book Now</h1>
-                    <p class="text-gray-500 mb-6">Chemistry - Reactions and Rates</p>
-
-                    <div class="flex items-center justify-between mb-4">
-                        <h2 class="text-lg font-semibold">January 2020</h2>
-                        <div class="flex gap-2">
-                            <button class="p-2 rounded hover:bg-gray-100">&larr;</button>
-                            <button class="p-2 rounded hover:bg-gray-100">&rarr;</button>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-7 gap-2">
-                        <div class="text-center text-sm text-gray-500">Sun</div>
-                        <div class="text-center text-sm text-gray-500">Mon</div>
-                        <div class="text-center text-sm text-gray-500">Tue</div>
-                        <div class="text-center text-sm text-gray-500">Wed</div>
-                        <div class="text-center text-sm text-gray-500">Thu</div>
-                        <div class="text-center text-sm text-gray-500">Fri</div>
-                        <div class="text-center text-sm text-gray-500">Sat</div>
-                    </div>
-                    <div id="date_adder" class="grid grid-cols-7 gap-2">
-                    </div>
-                </div>
-
-                <!-- Time Slots -->
-                <div class="time-slots">
-                    <h3 class="text-lg mb-4">Pick a time</h3>
-                    <div class="flex flex-col gap-4">
-                        <button class="text-left px-4 py-2 rounded hover:bg-gray-100">10:00</button>
-                        <button class="text-left px-4 py-2 rounded hover:bg-gray-100">11:00</button>
-                        <button
-                            class="text-left px-4 py-2 rounded border-2 border-green-500 text-green-800">12:00</button>
-                        <button class="text-left px-4 py-2 rounded hover:bg-gray-100">13:00</button>
-                        <button class="text-left px-4 py-2 rounded hover:bg-gray-100">14:00</button>
-                    </div>
-                </div>
-
-                <!-- Class Details -->
-                <div class="class-details bg-green-600 text-white p-6 pb-12 rounded-2xl" style="margin-bottom: -70px;">
-                    <form class="mt-8 space-y-6" action="#" method="POST">
-                        <input type="hidden" name="remember" value="true">
-                        <div class="rounded-md shadow-sm -space-y-px">
-                            <div>
-                                <input id="user-id" name="user-id" type="text" required
-                                    class="relative block w-full px-3 py-3 bg-transparent text-white placeholder-gray-300 focus:placeholder-white border-gray-300 border-b-2 sm:text-sm outline-0 focus:border-b-white"
-                                    placeholder="Name">
-                            </div>
-                            <div>
-                                <input id="user-id" name="user-id" type="text" required
-                                    class="relative block w-full px-3 py-3 bg-transparent text-white placeholder-gray-300 focus:placeholder-white border-gray-300 border-b-2 sm:text-sm outline-0 focus:border-b-white"
-                                    placeholder="Email ID">
-                            </div>
-                        </div>
-                    </form>
-
-                    <div class="space-y-4 my-8">
-                        <div class="flex items-center gap-3">
-                            <div class="p-2 border-2 border-white text-white rounded">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <p class="font-semibold">17 Jan, 2020</p>
-                                <p class="text-sm text-gray-200">Date</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-3">
-                            <div class="p-2 border-2 border-white rounded">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <p class="font-semibold">12:00 (GMT+1)</p>
-                                <p class="text-sm text-gray-200">Time</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button
-                        class="w-full bg-white text-black font-semibold py-3 px-6 rounded-lg hover:bg-yellow-400 transition-colors">
-                        Submit →
-                    </button>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="bg-white py-12 px-4 sm:px-6 lg:px-8">
-        <!-- Newsletter Section -->
-        <div class="max-w-7xl mx-auto mb-16">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900">Join our newsletter</h3>
-              <p class="text-gray-500">We'll send you a nice letter once per week. No spam.</p>
-            </div>
-            <div class="flex w-full sm:w-auto gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                class="flex-1 sm:w-64 px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
-              >
-              <button class="px-5 py-2 bg-green-500 text-white rounded-lg font-medium hover:bg-green-600 transition-colors">
-                Subscribe
-              </button>
-            </div>
+          <div id="date_adder" class="grid grid-cols-7 gap-2">
           </div>
         </div>
-      
-        <!-- Main Footer Content -->
-        <div class="max-w-7xl mx-auto">
-          <div class="grid grid-cols-1 md:grid-cols-6 gap-8 mb-12">
-            <!-- Brand Column -->
-            <div class="md:col-span-2">
-              <div class="flex items-center gap-2 mb-4">
-                <div class="w-8 h-8 rounded-full bg-green-500"></div>
-                <span class="font-semibold text-xl">Dream.com</span>
+
+        <!-- Time Slots -->
+        <div class="time-slots">
+          <h3 class="text-lg mb-4">Pick a time</h3>
+          <div class="flex flex-col gap-4">
+            <button class="text-left px-4 py-2 rounded hover:bg-gray-100">10:00</button>
+            <button class="text-left px-4 py-2 rounded hover:bg-gray-100">11:00</button>
+            <button class="text-left px-4 py-2 rounded border-2 border-green-500 text-green-800">12:00</button>
+            <button class="text-left px-4 py-2 rounded hover:bg-gray-100">13:00</button>
+            <button class="text-left px-4 py-2 rounded hover:bg-gray-100">14:00</button>
+          </div>
+        </div>
+
+        <!-- Class Details -->
+        <div class="class-details bg-green-600 text-white p-6 pb-12 rounded-2xl" style="margin-bottom: -70px;">
+          <form class="mt-8 space-y-6" action="#" method="POST">
+            <input type="hidden" name="remember" value="true">
+            <div class="rounded-md shadow-sm -space-y-px">
+              <div>
+                <input id="user-id" name="user-id" type="text" required
+                  class="relative block w-full px-3 py-3 bg-transparent text-white placeholder-gray-300 focus:placeholder-white border-gray-300 border-b-2 sm:text-sm outline-0 focus:border-b-white"
+                  placeholder="Name">
               </div>
-              <p class="text-gray-500 max-w-sm">
-                Design amazing digital experiences that create more happy in the world.
-              </p>
+              <div>
+                <input id="user-id" name="user-id" type="text" required
+                  class="relative block w-full px-3 py-3 bg-transparent text-white placeholder-gray-300 focus:placeholder-white border-gray-300 border-b-2 sm:text-sm outline-0 focus:border-b-white"
+                  placeholder="Email ID">
+              </div>
             </div>
-      
-            <!-- Product Column -->
-            <div>
-              <h4 class="font-semibold text-gray-900 mb-4">Product</h4>
-              <ul class="space-y-3">
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Overview</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Features</a></li>
-                <li>
-                  <div class="flex items-center gap-2">
-                    <a href="#" class="text-gray-500 hover:text-gray-600">Solutions</a>
-                    <span class="px-2 py-1 text-xs bg-gray-100 rounded-full">New</span>
+          </form>
+
+          <div class="space-y-4 my-8">
+            <div class="flex items-center gap-3">
+              <div class="p-2 border-2 border-white text-white rounded">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold">17 Jan, 2025</p>
+                <p class="text-sm text-gray-200">Date</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="p-2 border-2 border-white rounded">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold">12:00 (GMT+1)</p>
+                <p class="text-sm text-gray-200">Time</p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="w-full bg-white text-black font-semibold py-3 px-6 rounded-lg hover:bg-yellow-400 transition-colors">
+            Submit →
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white py-12 px-4 sm:px-6 lg:px-8">
+    <!-- Newsletter Section -->
+    <div class="max-w-7xl mx-auto mb-16">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div>
+          <h3 class="text-xl font-semibold text-gray-900">Join our newsletter</h3>
+          <p class="text-gray-500">We'll send you a nice letter once per week.</p>
+        </div>
+        <div class="flex w-full sm:w-auto gap-2">
+          <input type="email" placeholder="Enter your email"
+            class="flex-1 sm:w-64 px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500">
+          <button class="px-5 py-2 bg-green-500 text-white rounded-lg font-medium hover:bg-green-600 transition-colors">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-6 gap-8 mb-12">
+        <!-- Brand Column -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 rounded-full bg-green-500"></div>
+            <span class="font-semibold text-xl">Dream</span>
+          </div>
+          <p class="text-gray-500 max-w-sm">
+            Design amazing digital experiences that create more happy in the world.
+          </p>
+        </div>
+
+        <!-- Product Column -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">Product</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Overview</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Features</a></li>
+            <li>
+              <div class="flex items-center gap-2">
+                <a href="#" class="text-gray-500 hover:text-gray-600">Solutions</a>
+                <span class="px-2 py-1 text-xs bg-gray-100 rounded-full">New</span>
+              </div>
+            </li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Tutorials</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Pricing</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Releases</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Column -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">Company</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">About us</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Careers</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Press</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">News</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Media kit</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources Column -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">Resources</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Blog</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Newsletter</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Events</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Help centre</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Tutorials</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Column -->
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">Legal</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Terms</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Privacy</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Cookies</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Licenses</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Settings</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-600">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="pt-8 border-t border-gray-200">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p class="text-gray-500 text-sm">© 2024 All rights reserved.</p>
+          <div class="flex gap-4">
+            <a href="#" class="text-gray-400 hover:text-green-500">
+              <span class="sr-only">Twitter</span>
+              <i class="fa-brands text-xl fa-x-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-green-500">
+              <span class="sr-only">LinkedIn</span>
+              <i class="fa-brands text-xl fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-green-500">
+              <span class="sr-only">Facebook</span>
+              <i class="fa-brands text-xl fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let date = document.querySelector('#date_adder');
+    let online_training = document.querySelector('#online_training');
+    let online_training_container = document.querySelector('#online_training_container');
+
+    // Toggle menu for mobile view
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    });
+
+    online_training.addEventListener("click", () => {
+      if (online_training_container.style.display === "none") {
+        online_training_container.style.display = "block";
+      } else {
+        online_training_container.style.display = "none";
+      }
+    })
+
+    for (let i = 1; i <= 31; i++) {
+      date.innerHTML += `<div class="text-center py-2">${i}</div>`;
+      console.log(i);
+    }
+
+    const testimonials = [
+          {
+              id: 1,
+              name: "John Doe",
+              role: "CEO, TechCorp",
+              content: "Since adopting Founding.co to project completion times, it's like having an extra set of hands!",
+              avatar: "https://via.placeholder.com/48"
+          },
+          {
+              id: 2,
+              name: "Jane Smith",
+              role: "Designer, CreativeCo",
+              content: "The transition has been seamless, and the software scales effortlessly as we grow.",
+              avatar: "https://via.placeholder.com/48"
+          },
+          {
+              id: 3,
+              name: "Alex Johnson",
+              role: "Marketing Manager, GrowthInc",
+              content: "The transition has been seamless, and the software scales effortlessly as we grow.",
+              avatar: "https://via.placeholder.com/48"
+          }
+      ];
+
+      // testimonials code
+      const carouselInner = document.getElementById('carousel-inner');
+      const carouselDots = document.getElementById('carousel-dots');
+      let currentIndex = 0;
+
+      function createTestimonialElement(testimonial) {
+          return `
+              <div class="w-full flex-shrink-0 px-4">
+                  <div class="bg-white rounded-lg shadow-lg p-8">
+                      <div class="flex items-center mb-4">
+                          <img src="${testimonial.avatar}" alt="${testimonial.name}" class="w-12 h-12 rounded-full mr-4">
+                          <div>
+                              <h3 class="font-semibold text-lg">${testimonial.name}</h3>
+                              <p class="text-gray-600">${testimonial.role}</p>
+                          </div>
+                      </div>
+                      <p class="text-gray-700 italic">"${testimonial.content}"</p>
                   </div>
-                </li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Tutorials</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Pricing</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Releases</a></li>
-              </ul>
-            </div>
-      
-            <!-- Company Column -->
-            <div>
-              <h4 class="font-semibold text-gray-900 mb-4">Company</h4>
-              <ul class="space-y-3">
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">About us</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Careers</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Press</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">News</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Media kit</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Contact</a></li>
-              </ul>
-            </div>
-      
-            <!-- Resources Column -->
-            <div>
-              <h4 class="font-semibold text-gray-900 mb-4">Resources</h4>
-              <ul class="space-y-3">
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Blog</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Newsletter</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Events</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Help centre</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Tutorials</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Support</a></li>
-              </ul>
-            </div>
-      
-            <!-- Legal Column -->
-            <div>
-              <h4 class="font-semibold text-gray-900 mb-4">Legal</h4>
-              <ul class="space-y-3">
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Terms</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Privacy</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Cookies</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Licenses</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Settings</a></li>
-                <li><a href="#" class="text-gray-500 hover:text-gray-600">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-      
-          <!-- Footer Bottom -->
-          <div class="pt-8 border-t border-gray-200">
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <p class="text-gray-500 text-sm">© 2077 Untitled UI. All rights reserved.</p>
-              <div class="flex gap-4">
-                <a href="#" class="text-gray-400 hover:text-green-500">
-                  <span class="sr-only">Twitter</span>
-                  <i class="fa-brands text-xl fa-x-twitter"></i>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-green-500">
-                  <span class="sr-only">LinkedIn</span>
-                  <i class="fa-brands text-xl fa-linkedin-in"></i>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-green-500">
-                  <span class="sr-only">Facebook</span>
-                  <i class="fa-brands text-xl fa-instagram"></i>
-                </a>
               </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+          `;
+      }
 
-    <script>
-        let date = document.querySelector('#date_adder');
-        let online_training = document.querySelector('#online_training');
-        let online_training_container = document.querySelector('#online_training_container');
+      function createDotElement(index) {
+          const dot = document.createElement('button');
+          dot.className = `w-3 h-3 rounded-full ${index === 0 ? 'bg-blue-500' : 'bg-gray-300'}`;
+          dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+          dot.addEventListener('click', () => goToSlide(index));
+          return dot;
+      }
 
-        // Toggle menu for mobile view
-        document.getElementById('menu-toggle').addEventListener('click', () => {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('hidden');
+      function updateCarousel() {
+          carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+          Array.from(carouselDots.children).forEach((dot, index) => {
+              dot.className = `w-3 h-3 rounded-full ${index === currentIndex ? 'bg-blue-500' : 'bg-gray-300'}`;
+          });
+      }
+
+      function goToSlide(index) {
+          currentIndex = index;
+          updateCarousel();
+      }
+
+      function nextSlide() {
+          currentIndex = (currentIndex + 1) % testimonials.length;
+          updateCarousel();
+      }
+
+      // Initialize carousel
+      testimonials.forEach(testimonial => {
+          carouselInner.innerHTML += createTestimonialElement(testimonial);
+          carouselDots.appendChild(createDotElement(testimonial.id - 1));
+      });
+
+      // Auto-play
+      setInterval(nextSlide, 2000);
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="./home-script.js" type="text/javascript">
+    // GSAP Animations
+    gsap.from('.calendar-section', {
+      duration: 1,
+      x: -50,
+      opacity: 0,
+      ease: 'power3.out'
+    });
+
+    gsap.from('.time-slots', {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      delay: 0.3,
+      ease: 'power3.out'
+    });
+
+    gsap.from('.class-details', {
+      duration: 1,
+      x: 50,
+      opacity: 0,
+      delay: 0.6,
+      ease: 'power3.out'
+    });
+
+    // Animate buttons on hover
+    gsap.utils.toArray('.time-slots button').forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        gsap.to(button, {
+          scale: 1.05,
+          duration: 0.3
         });
+      });
 
-        online_training.addEventListener("click", () => {
-            if(online_training_container.style.display === "none") {
-                online_training_container.style.display = "block";
-            } else {
-                online_training_container.style.display = "none";
-            }
-        })
-
-        for (let i = 1; i <= 31; i++) {
-            date.innerHTML += `<div class="text-center py-2">${i}</div>`;
-            console.log(i);
-        }
-
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="./home-script.js" type="text/javascript">
-        // GSAP Animations
-        gsap.from('.calendar-section', {
-            duration: 1,
-            x: -50,
-            opacity: 0,
-            ease: 'power3.out'
+      button.addEventListener('mouseleave', () => {
+        gsap.to(button, {
+          scale: 1,
+          duration: 0.3
         });
-
-        gsap.from('.time-slots', {
-            duration: 1,
-            y: 50,
-            opacity: 0,
-            delay: 0.3,
-            ease: 'power3.out'
-        });
-
-        gsap.from('.class-details', {
-            duration: 1,
-            x: 50,
-            opacity: 0,
-            delay: 0.6,
-            ease: 'power3.out'
-        });
-
-        // Animate buttons on hover
-        gsap.utils.toArray('.time-slots button').forEach(button => {
-            button.addEventListener('mouseenter', () => {
-                gsap.to(button, {
-                    scale: 1.05,
-                    duration: 0.3
-                });
-            });
-
-            button.addEventListener('mouseleave', () => {
-                gsap.to(button, {
-                    scale: 1,
-                    duration: 0.3
-                });
-            });
-        });
-    </script>
+      });
+    });
+  </script>
 </body>
 
 </html>
