@@ -218,9 +218,16 @@
   <h1 class="text-4xl md:text-5xl font-bold mt-10 text-center service_title">
     <span class="bg-green-300 text-white">Step by S</span>tep Guide to <span class="bg-green-400 text-white">Achieving You</span>r Goals
   </h1>
-  <main class="container mx-auto px-4 py-8 md:pb-16">
+  <main class="container mx-auto px-4 py-8 md:pb-16 relative" id="main_id">
+
     <!-- card 1 -->
-    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 rounded-t-lg shadow-lg md:h-[500px]">
+    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 rounded-t-lg shadow-lg md:h-[500px] step_bstep_cards">
+      <div class="absolute bg-green-600 h-2 w-2 l-pointer" id="marker_point">
+
+
+        <!-- <path id="motionPath" d="M50 200 C150 50, 250 350, 350 200" fill="none" stroke="red" /> -->
+
+      </div>
       <!-- Left side with car image -->
       <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
         <img src="service card (5).png" alt="Electric Car" class="max-w-full max-h-full object-contain" />
@@ -242,7 +249,9 @@
     </div>
 
     <!-- card 2 -->
-    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px]">
+    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px] step_bstep_cards">
+      <div class="absolute bg-green-600 h-2 w-2 l-pointer">
+      </div>
       <!-- Right side with content -->
       <div class="w-full md:w-1/2 space-y-6">
         <h1 class="text-4xl font-bold text-gray-800">
@@ -264,7 +273,9 @@
     </div>
 
     <!-- card 3 -->
-    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px]">
+    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px] step_bstep_cards">
+      <div class="absolute bg-green-600 h-2 w-2 l-pointer">
+      </div>
       <!-- Left side with car image -->
       <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
         <img src="service card (3).png" alt="Electric Car" class="max-w-full max-h-full object-contain" />
@@ -286,7 +297,9 @@
     </div>
 
     <!-- card 4 -->
-    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px]">
+    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px] step_bstep_cards">
+      <div class="absolute bg-green-600 h-2 w-2 l-pointer">
+      </div>
       <!-- Right side with content -->
       <div class="w-full md:w-1/2 space-y-6">
         <h1 class="text-4xl font-bold text-gray-800">
@@ -308,7 +321,9 @@
     </div>
 
     <!-- card 5 -->
-    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px]">
+    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px] step_bstep_cards">
+      <div class="absolute bg-green-600 h-2 w-2 l-pointer">
+      </div>
       <!-- Left side with car image -->
       <div class="relative w-full md:w-1/2 h-[500px] md:h-full flex justify-center items-center">
         <img src="service card (4).png" alt="Electric Car" class="max-w-full max-h-full object-contain" />
@@ -330,7 +345,9 @@
     </div>
 
     <!-- card 6 -->
-    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 rounded-b-lg shadow-lg md:h-[500px]">
+    <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 rounded-b-lg shadow-lg md:h-[500px] step_bstep_cards">
+      <div class="absolute bg-green-600 h-2 w-2 l-pointer">
+      </div>
       <!-- Right side with content -->
       <div class="w-full md:w-1/2 space-y-6">
         <h1 class="text-4xl font-bold text-gray-800">
@@ -350,7 +367,12 @@
         <img src="service card (6).png" alt="Electric Car" class="max-w-full max-h-full object-contain" />
       </div>
     </div>
-  </main>
+
+            <div id="line" class="absolute absolute left-0 top-0">
+              <div id="pointer" class="absolute w-4 h-4 rounded-full -left-2"></div>
+          </div>
+  
+</main>
 
   <!-- testimonial box -->
   <main class="container mx-auto px-4 py-16 max-w-6xl">
@@ -396,18 +418,17 @@
       <div id="carousel-inner" class="flex transition-transform duration-500 ease-in-out">
           <!-- Testimonials will be dynamically inserted here -->
       </div>
-      <div class="absolute bottom-4 left-0 right-0">
+      <div class="absolute bottom-4 left-0 right-0" style="opacity: 0;">
           <div id="carousel-dots" class="flex justify-center space-x-2">
               <!-- Navigation dots will be dynamically inserted here -->
           </div>
       </div>
   </div>
-    
-  </main>
+</main>
 
 
-  <!-- schedule box -->
-  <main class="bg-gray-100 p-10">
+<!-- schedule box -->
+<main class="bg-gray-100 p-10">
     <h1
       class="text-5xl font-bold mb-2 text-center mb-5 bg-gradient-to-r from-blue-100 via-green-500 to-green-900 text-transparent bg-clip-text">
       <span class="bg-green-300 text-white">&nbsp;Your</span> Time, <span class="bg-green-400 text-white">Your
@@ -771,5 +792,4 @@
     });
   </script>
 </body>
-
 </html>

@@ -1,5 +1,7 @@
+// import gsap from "gsap"
 
 const timeline = gsap.timeline()
+gsap.registerPlugin("ScrollTrigger")
 
 timeline.from(".hero_title",{
     y: -200,
@@ -65,3 +67,120 @@ gsap.fromTo(".service_title, .service_description",{
         end: "bottom 90%",
     }
 })
+
+gsap.fromTo(".step_bstep_cards",{
+    opacity:0
+},{
+    opacity:1,
+    scrollTrigger:{
+        trigger: ".step_bstep_cards",
+        start: "top 70%",
+        end: "bottom 90%",
+        stagger: 0.5
+    }
+})
+
+
+gsap.fromTo("#service_title", {
+    opacity:0,
+    y:50
+},
+{
+    opacity:1,
+    y:0,
+    scrollTrigger:{
+        trigger:"#service_title",
+        start: "top 60%",
+        end: "bottom 90%",
+    }
+}
+)
+
+document.addEventListener('DOMContentLoaded', function() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const main = document.getElementById('main_id');
+    const pointer = document.getElementById('pointer');
+    const card_height = document.getElementById("main_id").clientHeight
+
+    gsap.to(pointer, {
+        y: () => (main.offsetHeight - card_height*0.065 - pointer.offsetHeight),
+        ease: "none",
+        scrollTrigger: {
+            trigger: main,
+            start: "top center",
+            end: "bottom bottom",
+            scrub: true
+        }
+    });
+
+    gsap.to("#line", {
+        height: () => (main.offsetHeight - card_height*0.065 - pointer.offsetHeight),
+        ease: "none",
+        scrollTrigger: {
+            trigger: main,
+            start: "top center",
+            end: "bottom bottom",
+            scrub: true
+        }
+    });
+});
+
+gsap.utils.toArray(".l-pointer").forEach((pointer)=>{
+    gsap.to(pointer,{
+        border: "10px solid green",
+        x: -5.5,
+        y:-20,
+        ease: "linear",
+        scrollTrigger: {
+            trigger: pointer,
+            start: "top center",
+            end: "bottom center",
+        }
+    })
+})
+
+
+gsap.utils.toArray(".step_bstep_cards").forEach((section, index) => {
+    gsap.fromTo(
+      section,
+      {
+        y: 100,      
+        opacity: 0,  
+      },
+      {
+        y: 0,       
+        opacity: 1,  
+        scrollTrigger: {
+          trigger: section,
+          start: "top 38%",
+          end: "bottom 65%",
+        //   markers: true,
+          scrub: true,
+          pin: true,
+          pinSpacing: true,
+        },
+      }
+    );
+  });
+  
+// gsap.utils.toArray(".l-pointer").forEach((pointer,i)=>{
+//     ScrollTrigger.create({
+//         trigger: pointer,
+//         start: "top 38%",
+//         end: "bottom 65%",
+//         scrub: true,
+//         onEnter: ()=> {
+//             j = i+1;
+//             if(j<document.getElementsByClassName("l-pointer").length)
+//             document.getElementById("pointer").style.backgroundImage = `url("${bg[Math.floor(j/2)]}")`;
+//         },
+//         onEnterBack: ()=> {
+//             j = i+1; 
+//             // if (j== document.getElementsByClassName("l-pointer").length)
+//             //     document.getElementById("pointer").style.transform = "rotateZ(270deg)"
+//             if(j<document.getElementsByClassName("l-pointer").length)
+//             document.getElementById("pointer").style.backgroundImage = `url("${bg[Math.floor(j/2)]}")`;
+//         },
+//     })
+// })

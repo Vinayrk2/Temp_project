@@ -3,210 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Railway.com Clone</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            background-color: #0B0A0D;
-            color: white;
-        }
-
-        .train {
-            width: 24px;
-            height: 24px;
-            background-color: #8B5CF6;
-            border-radius: 50%;
-            position: absolute;
-            left: 0;
-            transform: translate(-50%, -50%);
-        }
-
-        .station {
-            width: 12px;
-            height: 12px;
-            background-color: #1F1F23;
-            border: 2px solid #2D2D33;
-            border-radius: 50%;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .station.active {
-            background-color: #8B5CF6;
-            border-color: #9333EA;
-        }
-
-        .track {
-            height: 2px;
-            background: linear-gradient(90deg, #8B5CF6 var(--progress, 0%), #2D2D33 var(--progress, 0%));
-            position: relative;
-        }
-    </style>
+    <title>Document</title>
 </head>
-<body class="min-h-[300vh]">
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold">Railway</div>
-            <div class="flex gap-6">
-                <a href="#" class="text-gray-400 hover:text-white">Features</a>
-                <a href="#" class="text-gray-400 hover:text-white">Docs</a>
-                <a href="#" class="text-gray-400 hover:text-white">Blog</a>
-                <a href="#" class="text-gray-400 hover:text-white">Pricing</a>
-            </div>
-        </div>
-    </nav>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" style="border: 1px solid black;">
+        <!-- Define the motion path -->
+        <path id="motionPath" d="M50 200 C150 50, 250 350, 350 200" fill="none" stroke="red" />
+        
+        <!-- The object to animate -->
+        <circle r="10" fill="blue">
+            <animateMotion repeatCount="indefinite" dur="5s">
+                <mpath href="#motionPath" />
+            </animateMotion>
+        </circle>
+    </svg>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-50" style="border: 1px solid black; z-index:10; width:100%; height:100%;">
+        <path id="motionPath" d="M510.236083984375 3.9097137451171875 C971.236083984375 1612.46533203125, 637.236083984375 2725.46533203125, 766.236083984375 4342.2431640625" fill="none" stroke="red" />
+        <circle r="10" fill="blue" id="movingCircle">
+          <!-- <animateMotion repeatCount="indefinite" dur="5s" >
+              <mpath href="#motionPath" />
+          </animateMotion> -->
+      </circle>
+      </svg>
+    
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathHelper.min.js"></script>
+    <script> 
+        gsap.registerPlugin("ScrollTrigger")
+        gsap.registerPlugin("MotionPathPlugin");
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center px-6">
-        <div class="max-w-4xl text-center">
-            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
-                Shipping great products is hard.<br>
-                Scaling infrastructure is easy.
-            </h1>
-            <p class="text-gray-400 text-xl mb-8">
-                Railway simplifies your infrastructure stack from servers to observability with a single, scalable, easy-to-use platform.
-            </p>
-        </div>
-    </section>
-
-    <!-- Train Track Progress -->
-    <div class="fixed top-1/2 left-0 right-0 px-12">
-        <div class="max-w-4xl mx-auto relative">
-            <!-- Train -->
-            <div class="train"></div>
-            
-            <!-- Track -->
-            <div class="flex items-center gap-4">
-                <!-- Deploy Section -->
-                <div class="station" data-step="1"></div>
-                <div class="track flex-1"></div>
-                
-                <!-- Network Section -->
-                <div class="station" data-step="2"></div>
-                <div class="track flex-1"></div>
-                
-                <!-- Scale Section -->
-                <div class="station" data-step="3"></div>
-                <div class="track flex-1"></div>
-                
-                <!-- Monitor Section -->
-                <div class="station" data-step="4"></div>
-            </div>
-
-            <!-- Labels -->
-            <div class="flex justify-between mt-4 text-sm text-gray-400">
-                <span>Deploy</span>
-                <span>Network</span>
-                <span>Scale</span>
-                <span>Monitor</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Content Sections -->
-    <div class="relative z-10">
-        <!-- Deploy Section -->
-        <section class="min-h-screen flex items-center justify-center" data-section="1">
-            <div class="max-w-2xl">
-                <h2 class="text-4xl font-bold mb-4">Deploy</h2>
-                <p class="text-gray-400">Deploy your applications with just a few clicks. Connect your GitHub repository and we'll handle the rest.</p>
-            </div>
-        </section>
-
-        <!-- Network Section -->
-        <section class="min-h-screen flex items-center justify-center" data-section="2">
-            <div class="max-w-2xl">
-                <h2 class="text-4xl font-bold mb-4">Network</h2>
-                <p class="text-gray-400">Secure networking out of the box. Automatic HTTPS, private networking between services, and more.</p>
-            </div>
-        </section>
-
-        <!-- Scale Section -->
-        <section class="min-h-screen flex items-center justify-center" data-section="3">
-            <div class="max-w-2xl">
-                <h2 class="text-4xl font-bold mb-4">Scale</h2>
-                <p class="text-gray-400">Scale your applications automatically. Handle any amount of traffic with automatic scaling.</p>
-            </div>
-        </section>
-
-        <!-- Monitor Section -->
-        <section class="min-h-screen flex items-center justify-center" data-section="4">
-            <div class="max-w-2xl">
-                <h2 class="text-4xl font-bold mb-4">Monitor</h2>
-                <p class="text-gray-400">Monitor your applications in real-time. Get insights into your application's performance.</p>
-            </div>
-        </section>
-    </div>
-
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        const train = document.querySelector('.train');
-        const stations = document.querySelectorAll('.station');
-        const tracks = document.querySelectorAll('.track');
-
-        // Create a timeline for the train movement
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: "body",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 1,
-            }
-        });
-
-        // Calculate total track width
-        const trackContainer = document.querySelector('.max-w-4xl');
-        const totalDistance = trackContainer.offsetWidth;
-
-        // Animate train along the track
-        tl.to(train, {
-            left: totalDistance,
-            ease: "none",
-        });
-
-        // Update stations and tracks based on scroll position
-        ScrollTrigger.create({
-            trigger: "body",
-            start: "top top",
-            end: "bottom bottom",
-            onUpdate: (self) => {
-                const progress = self.progress * 100;
-                
-                // Update tracks
-                tracks.forEach(track => {
-                    track.style.setProperty('--progress', `${progress}%`);
-                });
-
-                // Update stations
-                stations.forEach((station, index) => {
-                    const stationProgress = (index + 1) * (100 / stations.length);
-                    if (progress >= stationProgress) {
-                        station.classList.add('active');
-                    } else {
-                        station.classList.remove('active');
-                    }
-                });
-            }
-        });
-
-        // Create scroll triggers for each section
-        document.querySelectorAll('[data-section]').forEach((section, index) => {
-            ScrollTrigger.create({
-                trigger: section,
-                start: "top center",
-                end: "bottom center",
-                onEnter: () => {
-                    stations[index].classList.add('active');
-                },
-                onLeaveBack: () => {
-                    stations[index].classList.remove('active');
-                }
-            });
-        });
+// Animate the circle along the path
+// gsap.to("#circle", {
+//     duration: 5, // Animation duration in seconds
+//     repeat: -1,  // Repeat indefinitely (-1 means infinite)
+//     ease: "power1.inOut", // Easing function
+//     motionPath: {
+//         path: "#motionPath", // Path to follow
+//         align: "#motionPath", // Align the element to the path
+//         alignOrigin: [0.5, 0.5], // Center alignment
+//     }
+// });
+        MotionPathHelper.create("#motionPath")
     </script>
 </body>
 </html>
