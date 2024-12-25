@@ -155,8 +155,8 @@ gsap.utils.toArray(".step_bstep_cards").forEach((section, index) => {
           trigger: section,
           start: "top 38%",
           end: "bottom 65%",
-        //   markers: true,
-          scrub: true,
+        //   markers: true
+          scrub: ()=> window.innerWidth > 380 ? true : false,
           pin: true,
           pinSpacing: true,
         },
