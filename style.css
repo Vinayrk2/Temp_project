@@ -34,7 +34,7 @@
     left:-4.18em;
     border-radius: 50%;
     border-color: red;
-    z-index: 1;
+    z-index: -1;
 }
 
 #pointer{
@@ -44,4 +44,9 @@
     position:absolute;
     left:-0.85vw;
     top: -3px;
+}
+
+.hr_marker{
+    position: absolute;
+    height:4px; 
 }
