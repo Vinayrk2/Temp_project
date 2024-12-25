@@ -169,7 +169,7 @@ gsap.utils.toArray(".step_bstep_cards").forEach((section, index) => {
         opacity: 0,  
       },
       {
-        width: 100,       
+        width: "4em",       
         opacity: 1,  
         scrollTrigger: {
           trigger: section,
