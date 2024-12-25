@@ -175,7 +175,6 @@ gsap.utils.toArray(".step_bstep_cards").forEach((section, index) => {
           trigger: section,
           start: "top 45%",
           end: "bottom 55%",
-          scrub: true
         },
       }
     );
