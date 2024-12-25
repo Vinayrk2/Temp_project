@@ -162,7 +162,26 @@ gsap.utils.toArray(".step_bstep_cards").forEach((section, index) => {
         },
       }
     );
+    gsap.fromTo(
+      ".hr_marker",
+      {
+        width: 0,      
+        opacity: 0,  
+      },
+      {
+        width: "4em",       
+        opacity: 1,  
+        scrollTrigger: {
+          trigger: section,
+          start: "top 45%",
+          end: "bottom 55%",
+          scrub: true
+        },
+      }
+    );
   });
+
+//   <div class="absolute hr_marker bg-gray-600"></div>
   
 // gsap.utils.toArray(".l-pointer").forEach((pointer,i)=>{
 //     ScrollTrigger.create({
