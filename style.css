@@ -34,7 +34,7 @@
     left:-4.18em;
     border-radius: 50%;
     border-color: red;
-    z-index: 2;
+    z-index: 1;
 }
 
 #pointer{
@@ -43,5 +43,6 @@
     height:70px; width:45px;
     position:absolute;
     left:-0.85vw;
-    top: -3px
+    top: -3px;
+    z-index: 4;
 }
