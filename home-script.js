@@ -104,103 +104,91 @@ document.addEventListener('DOMContentLoaded', function() {
     const card_height = document.getElementById("main_id").clientHeight
 
     gsap.to(pointer, {
-        y: () => (main.offsetHeight - card_height*0.06 - pointer.offsetHeight),
+        y: () => (main.offsetHeight - pointer.offsetHeight ),
         ease: "none",
         scrollTrigger: {
             trigger: main,
             start: "top center",
-            end: "bottom bottom",
-            scrub: true
+            end: "bottom center",
+            scrub: true,
         }
     });
 
     gsap.to("#line", {
-        height: () => (main.offsetHeight - card_height*0.06 - pointer.offsetHeight),
+        height: () => (main.offsetHeight - pointer.offsetHeight ),
         ease: "none",
         scrollTrigger: {
             trigger: main,
             start: "top center",
-            end: "bottom bottom",
+            end: "bottom center",
             scrub: true
         }
     });
 });
-
-gsap.utils.toArray(".l-pointer").forEach((pointer)=>{
-    gsap.to(pointer,{
-        border: "10px solid black",
-        x: -5.5,
-        y:-20,
-        ease: "linear",
-        scrollTrigger: {
-            trigger: pointer,
-            start: "top center",
-            end: "bottom center",
-        }
-    })
+let sbs_process;
+document.addEventListener("DOMContentLoaded", ()=>{
+  sbs_process = gsap.timeline()
+  if(window.innerWidth < 1027)
+    return;
+  sbs_process.add(gsap.utils.toArray(".l-pointer").forEach((pointer)=>{
+  
+      gsap.to(pointer,{
+          border: "10px solid black",
+          x: -5.5,
+          y:-20,
+          ease: "linear",
+          scrollTrigger: {
+              trigger: pointer,
+              start: "top center",
+              end: "bottom center",
+          }
+      })
+  })
+  )
+  
+  sbs_process.add( gsap.utils.toArray(".step_bstep_cards").forEach((section, index) => {
+  
+          gsap.fromTo(
+            section,
+            {
+              opacity: 0,
+            },
+            {
+             
+              opacity: 1,
+              scrollTrigger: {
+                trigger: section,
+                start: "top 38%",
+                end: "bottom 65%",
+                scrub: true, // Disable scrub on mobile
+              },
+            }
+          );
+          
+          gsap.fromTo(
+              ".hr_marker",
+            {
+              width: 0,      
+              opacity: 0,  
+            },
+            {
+              width: "4.15em",       
+              opacity: 1,  
+              scrollTrigger: {
+                trigger: section,
+                start: "top 45%",
+                end: "bottom 55%",
+              },
+            }
+          );
+  })
+  )
 })
 
 
-gsap.utils.toArray(".step_bstep_cards").forEach((section, index) => {
-    const isMobile = window.innerWidth <= 380;
-  
-    gsap.fromTo(
-      section,
-      {
-        y: 100,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: section,
-          start: "top 38%",
-          end: "bottom 65%",
-          scrub: !isMobile, // Disable scrub on mobile
-          pin: !isMobile,   // Disable pinning on mobile
-          pinSpacing: !isMobile, // Disable pin spacing on mobile
-        },
-      }
-    );
+document.addEventListener("resize",()=>{
+  if (window.innerWidth < 1027){
+    sbs_process.clear()
+  }
+})
 
-    gsap.fromTo(
-      ".hr_marker",
-      {
-        width: 0,      
-        opacity: 0,  
-      },
-      {
-        width: "4em",       
-        opacity: 1,  
-        scrollTrigger: {
-          trigger: section,
-          start: "top 45%",
-          end: "bottom 55%",
-        },
-      }
-    );
-  });
-
-//   <div class="absolute hr_marker bg-gray-600"></div>
-  
-// gsap.utils.toArray(".l-pointer").forEach((pointer,i)=>{
-//     ScrollTrigger.create({
-//         trigger: pointer,
-//         start: "top 38%",
-//         end: "bottom 65%",
-//         scrub: true,
-//         onEnter: ()=> {
-//             j = i+1;
-//             if(j<document.getElementsByClassName("l-pointer").length)
-//             document.getElementById("pointer").style.backgroundImage = `url("${bg[Math.floor(j/2)]}")`;
-//         },
-//         onEnterBack: ()=> {
-//             j = i+1; 
-//             // if (j== document.getElementsByClassName("l-pointer").length)
-//             //     document.getElementById("pointer").style.transform = "rotateZ(270deg)"
-//             if(j<document.getElementsByClassName("l-pointer").length)
-//             document.getElementById("pointer").style.backgroundImage = `url("${bg[Math.floor(j/2)]}")`;
-//         },
-//     })
-// })
