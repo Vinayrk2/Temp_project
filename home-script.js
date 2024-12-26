@@ -68,16 +68,18 @@ gsap.fromTo(".service_title, .service_description",{
     }
 })
 
-gsap.fromTo(".step_bstep_cards",{
-    opacity:0
-},{
+gsap.utils.toArray(".step_bstep_cards").forEach((section,i)=>{
+    gsap.to(section,
+      {
     opacity:1,
     scrollTrigger:{
-        trigger: ".step_bstep_cards",
+        trigger: section,
         start: "top 70%",
         end: "bottom 90%",
-        stagger: 0.5
+        stagger: 0.5,
+        scrub: true
     }
+})
 })
 
 
@@ -147,24 +149,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   )
   
   sbs_process.add( gsap.utils.toArray(".step_bstep_cards").forEach((section, index) => {
-  
-          gsap.fromTo(
-            section,
-            {
-              opacity: 0,
-            },
-            {
-             
-              opacity: 1,
-              scrollTrigger: {
-                trigger: section,
-                start: "top 38%",
-                end: "bottom 65%",
-                scrub: true, // Disable scrub on mobile
-              },
-            }
-          );
-          
+            
           gsap.fromTo(
               ".hr_marker",
             {
