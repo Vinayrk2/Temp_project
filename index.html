@@ -22,22 +22,26 @@
         padding: 5px;
       }
     }
-  </style>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#4338ca',
-            secondary: '#fbbf24'
-          }
-        }
-      }
+
+    .yellow {
+      color:  #FCE205;
     }
 
-       
+    .yellow_light {
+      color:  #fff388;
+    }
 
-  </script>
+    .yellow_dark {
+      color:  #bdaa00;
+    }
+    .bg_yellow_light {
+      background-color: #fff388;
+    }
+
+    .bg_yellow_dark {
+      background-color: #bdaa00;
+    }
+  </style>
 </head>
 
 <body class="bg-white">
@@ -48,7 +52,7 @@
         <!-- Logo -->
         <div class="flex items-center">
           <a href="#" class="flex items-center space-x-2">
-            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 yellow_dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
             <span class="text-xl font-semibold">Dream</span>
@@ -66,20 +70,20 @@
 
         <!-- Navigation Links -->
         <div id="menu" class="hidden md:block flex flex-col md:items-center md:space-x-8 absolute md:relative">
-          <a href="#" class="text-green-600 font-medium header-links border-b border-green-500 pb-5">Home</a>
+          <a href="#" class="yellow_dark font-medium header-links border-b border-yellow-500 pb-5">Home</a>
           <a href="#" id="online_training" class="text-gray-600 hover:text-gray-900 header-links">Online Training <i
               class="fa-solid fa-chevron-down"></i></a>
           <div id="online_training_container" class="absolute mt-20 sm:mt-20 md:mt-5" style="display: none;">
             <div class="bg-gray-50 p-7 flex gap-10">
               <div class="flex flex-col gap-2">
-                <p class="border-b border-green-700 font-semibold">Courses</p>
+                <p class="border-b border-yellow-700 font-semibold">Courses</p>
                 <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Web Development</a>
                 <a href="#" class="text-gray-600 hover:text-gray-900 header-links">App Development</a>
                 <a href="#" class="text-gray-600 hover:text-gray-900 header-links">AI & ML</a>
                 <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Data Science</a>
               </div>
               <div class="flex flex-col gap-2">
-                <p class="border-b border-green-700 font-semibold">Resources</p>
+                <p class="border-b border-yellow-700 font-semibold">Resources</p>
                 <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Resume Templates</a>
                 <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Notes</a>
                 <a href="#" class="text-gray-600 hover:text-gray-900 header-links">Issue Solve</a>
@@ -104,7 +108,7 @@
     <div class="max-w-4xl mx-auto text-center">
       <!-- New Tag -->
       <div class="inline-flex items-center space-x-2 mb-6">
-        <span class="px-2.5 py-0.5 text-sm bg-green-100 text-green-600 rounded-full hero_other">
+        <span class="px-2.5 py-0.5 text-sm bg_yellow_light rounded-full hero_other">
             New
         </span>
         <span class="text-gray-600 hero_other">
@@ -113,7 +117,7 @@
     </div>
       <!-- Heading -->
       <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold tracking-tight mb-8 hero_title">
-        Your <span class="text-green-500 text-5xl sm:text-7xl md:text-8xl lg:text-9xl">All-In-One</span><br
+        Your <span class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl yellow">All-In-One</span><br
           class="hidden sm:block" />
         <p class="lg:text-8xl">Career Solution</p>
       </h1>
@@ -131,7 +135,7 @@
   <main class="container-fluid px-4 py-12 bg-gray-100">
     <!-- Header Section -->
     <header class="text-center mb-16">
-      <p class="text-green-800 uppercase tracking-wider mb-4 service_title"></p>
+      <p class="text-yellow-800 uppercase tracking-wider mb-4 service_title"></p>
       <h1 class="text-4xl md:text-5xl font-bold mb-4 service_title">
         <span>Revolutionize Your Career With Us</h1>
       <p class="text-gray-600 max-w-2xl mx-auto service_description">
@@ -215,14 +219,14 @@ Let Us Bridge the Gap to Your Dream Career
 
   <!-- Animation things -->
   <h1 class="text-4xl md:text-5xl font-bold mt-10 text-center service_title">
-    Step by Step Guide <br><span class="bg-green-400 text-white text-2xl">&nbsp; to Achieve Goals &nbsp;</span>
+    Step by Step Guide <br><span class="text-white text-2xl bg_yellow_dark">&nbsp; to Achieve Goals &nbsp;</span>
   </h1>
   <main class="container mx-auto px-4 py-8 md:pb-16 relative" id="main_id">
 
     <div class="md:ml-12">
     <!-- card 1 -->
     <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 rounded-t-lg shadow-lg md:h-[500px] z4 step_bstep_cards my-16">
-      <div class="absolute bg-green-600 h-2 w-2 l-pointer hidden md:block">
+      <div class="absolute bg_yellow_dark h-2 w-2 l-pointer hidden md:block">
         <div class="absolute hr_marker bg-black"></div>
       </div>
       <!-- Left side with car image -->
@@ -242,7 +246,7 @@ Let Us Bridge the Gap to Your Dream Career
 
     <!-- card 2 -->
     <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px] step_bstep_cards my-16">
-      <div class="absolute bg-green-600 h-2 w-2 l-pointer hidden md:block">
+      <div class="absolute bg_yellow_dark h-2 w-2 l-pointer hidden md:block">
         <div class="absolute hr_marker bg-black"></div>
       </div>
       <!-- Right side with content -->
@@ -262,7 +266,7 @@ Let Us Bridge the Gap to Your Dream Career
 
     <!-- card 3 -->
     <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px] step_bstep_cards my-16">
-      <div class="absolute bg-green-600 h-2 w-2 l-pointer hidden md:block">
+      <div class="absolute bg_yellow_dark h-2 w-2 l-pointer hidden md:block">
         <div class="absolute hr_marker bg-black"></div>
       </div>
       <!-- Left side with car image -->
@@ -282,7 +286,7 @@ Let Us Bridge the Gap to Your Dream Career
 
     <!-- card 4 -->
     <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px] step_bstep_cards my-16">
-      <div class="absolute bg-green-600 h-2 w-2 l-pointer hidden md:block">
+      <div class="absolute bg_yellow_dark h-2 w-2 l-pointer hidden md:block">
         <div class="absolute hr_marker bg-black"></div>
       </div>
       <!-- Right side with content -->
@@ -302,7 +306,7 @@ Let Us Bridge the Gap to Your Dream Career
 
     <!-- card 5 -->
     <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 shadow-lg md:h-[500px] step_bstep_cards my-16">
-      <div class="absolute bg-green-600 h-2 w-2 l-pointer hidden md:block">
+      <div class="absolute bg_yellow_dark h-2 w-2 l-pointer hidden md:block">
         <div class="absolute hr_marker bg-black"></div>
       </div>
       <!-- Left side with car image -->
@@ -322,7 +326,7 @@ Let Us Bridge the Gap to Your Dream Career
 
     <!-- card 6 -->
     <div class="flex flex-col md:flex-row items-center gap-8 mx-auto bg-white p-6 rounded-b-lg shadow-lg md:h-[500px] step_bstep_cards my-16">
-      <div class="absolute bg-green-600 h-2 w-2 l-pointer hidden md:block">
+      <div class="absolute bg_yellow_dark h-2 w-2 l-pointer hidden md:block">
         <div class="absolute hr_marker bg-black"></div>
       </div>
       <!-- Right side with content -->
@@ -333,7 +337,7 @@ Let Us Bridge the Gap to Your Dream Career
         <p class="text-gray-600 text-lg leading-relaxed">
           A reputable IT staffing agency continues to provide support even after job placement. They serve as a point of contact for any issues or concerns that may arise during the engagement. Additionally, the agency maintains regular communication to ensure satisfaction for both the candidate and the employer, facilitating long-term success.
         </p>
-        <button class="bg-green-700 text-white px-8 py-3 rounded-md hover:bg-green-800 transition-colors">
+        <button class=" text-white px-8 py-3 bg_yellow_dark rounded-md hover:transition-colors">
           JOIN NOW</button>
       </div>
       <!-- Left side with car image -->
@@ -353,7 +357,7 @@ Let Us Bridge the Gap to Your Dream Career
     <!-- Header Section -->
     <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-16">
       Transforming Careers
-      <span class="block text-green-400 text-3xl md:text-6xl testimonial_text">Those Who've Made the Choice</span>
+      <span class="block yellow text-3xl md:text-6xl testimonial_text">Those Who've Made the Choice</span>
     </h1>
 
     <!-- Stats Grid -->
@@ -404,14 +408,14 @@ Let Us Bridge the Gap to Your Dream Career
 <!-- schedule box -->
 <main class="bg-gray-100 py-10 sm:p-10">
     <h1
-      class="text-5xl font-bold mb-2 text-center mb-5 bg-gradient-to-r from-blue-100 via-green-500 to-green-900 text-transparent bg-clip-text">
-      &nbsp;Just One Step.<span class="bg-green-100 text-green-600 rounded-2xl">&nbsp;It’s That Simple!</span>
+      class="text-5xl font-bold mb-2 text-center mb-5 bg-gradient-to-r from-blue-100 via-yellow-500 to-yellow-900 text-transparent bg-clip-text">
+      &nbsp;Just One Step.<span class="rounded-2xl">&nbsp;It’s That Simple!</span>
     </h1>
     <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-md p-10 overflow-hidden">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Calendar Section -->
         <div class="calendar-section">
-          <h1 class="text-2xl font-bold mb-2 text-green-600">Book Now</h1>
+          <h1 class="text-2xl font-bold mb-2 yellow_dark">Book Now</h1>
           <p class="text-gray-500 mb-6">Reserve Your Spot Today!</p>
 
           <div class="flex items-center justify-between mb-4">
@@ -441,14 +445,14 @@ Let Us Bridge the Gap to Your Dream Career
           <div class="flex flex-col gap-4">
             <button class="text-left px-4 py-2 rounded hover:bg-gray-100">10:00</button>
             <button class="text-left px-4 py-2 rounded hover:bg-gray-100">11:00</button>
-            <button class="text-left px-4 py-2 rounded border-2 border-green-500 text-green-800">12:00</button>
+            <button class="text-left px-4 py-2 rounded border-2 border-yellow-500 text-yellow-800">12:00</button>
             <button class="text-left px-4 py-2 rounded hover:bg-gray-100">13:00</button>
             <button class="text-left px-4 py-2 rounded hover:bg-gray-100">14:00</button>
           </div>
         </div>
 
         <!-- Class Details -->
-        <div class="class-details bg-green-600 text-white p-6 pb-12 rounded-2xl" style="margin-bottom: -70px;">
+        <div class="class-details bg_yellow_dark text-white p-6 pb-12 rounded-2xl" style="margin-bottom: -70px;">
           <form class="mt-8 space-y-6" action="#" method="POST">
             <input type="hidden" name="remember" value="true">
             <div class="rounded-md shadow-sm -space-y-px">
@@ -493,7 +497,7 @@ Let Us Bridge the Gap to Your Dream Career
             </div>
           </div>
           <button
-            class="w-full bg-white text-black font-semibold py-3 px-6 rounded-lg hover:bg-yellow-400 transition-colors">
+            class="w-full bg-white text-black font-semibold py-3 px-6 rounded-lg hover:transition-colors">
             Submit →
           </button>
         </div>
@@ -512,7 +516,7 @@ Let Us Bridge the Gap to Your Dream Career
         <div class="flex w-full sm:w-auto gap-2">
           <input type="email" placeholder="Enter your email"
             class="flex-1 sm:w-64 px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500">
-          <button class="px-5 py-2 bg-green-500 text-white rounded-lg font-medium hover:bg-green-600 transition-colors">
+          <button class="px-5 py-2 bg_yellow_dark text-white rounded-lg font-medium hover:bg_yellow_light transition-colors">
             Subscribe
           </button>
         </div>
@@ -525,7 +529,7 @@ Let Us Bridge the Gap to Your Dream Career
         <!-- Brand Column -->
         <div class="md:col-span-2">
           <div class="flex items-center gap-2 mb-4">
-            <div class="w-8 h-8 rounded-full bg-green-500 p-1">
+            <div class="w-8 h-8 rounded-full bg_yellow_dark p-1">
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
@@ -600,15 +604,15 @@ Let Us Bridge the Gap to Your Dream Career
         <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
           <p class="text-gray-500 text-sm">© 2024 All rights reserved.</p>
           <div class="flex gap-4">
-            <a href="#" class="text-gray-400 hover:text-green-500">
+            <a href="#" class="text-gray-400">
               <span class="sr-only">Twitter</span>
               <i class="fa-brands text-xl fa-x-twitter"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-green-500">
+            <a href="#" class="text-gray-400">
               <span class="sr-only">LinkedIn</span>
               <i class="fa-brands text-xl fa-linkedin-in"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-green-500">
+            <a href="#" class="text-gray-400">
               <span class="sr-only">Facebook</span>
               <i class="fa-brands text-xl fa-instagram"></i>
             </a>
